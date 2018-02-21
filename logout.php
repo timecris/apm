@@ -1,0 +1,9 @@
+<?php
+	//session_save_path('./sessions');
+	session_start();
+	print_r($_SESSION);
+	session_destroy();
+?>
+<script>
+	history.back(-1);
+</script>

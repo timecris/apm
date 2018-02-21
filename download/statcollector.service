@@ -1,0 +1,13 @@
+[Unit]
+Documentation=statcollector
+Description=System statistics collector
+RequiresMountsFor=/var/log
+
+[Service]
+Type=simple
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=25
+ExecStart=/bin/sh /tmp/apm/statcollector.sh
+
+[Install]
+WantedBy=basic.target

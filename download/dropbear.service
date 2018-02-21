@@ -1,0 +1,14 @@
+[Unit]
+Documentation=dropbear
+Description=dropbear service daemon
+RequiresMountsFor=/var/log
+
+[Service]
+Type=simple
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=25
+Restart=always
+ExecStart=/tmp/apm/dropbear.sh
+
+[Install]
+WantedBy=basic.target
